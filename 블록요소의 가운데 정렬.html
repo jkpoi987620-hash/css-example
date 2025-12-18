@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section{
+      border: 5px dotted gray;
+    }
+    section>div{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin-left: 0;/*이 코드는 쓸 필요가 없다 왜냐면 원래 0이니까*/
+    }
+
+    section>div:nth-child(2){
+      background-color: gold;
+      /*margin-left와
+      margin-right를 auto로
+      설정하면 블록요소는 가운데 정렬됩니다.*/
+      margin-left: auto;
+      margin-right: auto;
+      margin:auto;
+    }
+    section>div:nth-child(3){
+      background-color: green;
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+</body>
+</html>
