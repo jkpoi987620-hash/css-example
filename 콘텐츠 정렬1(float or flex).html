@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    a{text-decoration: none; color: inherit;}
+    body{
+      color: #333;
+    }
+
+    .container{
+      
+      width: 1080px;
+      margin: auto;
+    }
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .container>.box{
+      width: 520px;
+      float: left;
+      margin: 0 10px 40px;/*float적용하면 겹치는 마진을 상쇠시키지 않고 그대로 적용*/
+    }
+    .box>img{
+      float: left;
+    }
+    .box>.txt{
+      float: left;
+      width: 340px;
+      margin-left: 20px;
+    }
+    .txt>h2{
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    .txt>p{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .txt a{
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container clearfix">
+    <div class="box">
+      <img src="http://picsum.photos/160" alt=""><!--이미지 태그에 alt빼면 에러-->
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ad, accusantium fuga ipsum tempore maxime cupiditate reprehenderit enim!</p>
+        <div class="link">
+          <a href="#"><img src="images/facebook_b.png" alt="facebook"></a>
+          <a href="#"><img src="images/pinterest_b.png" alt="pinterest"></a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <img src="http://picsum.photos/160" alt=""><!--이미지 태그에 alt빼면 에러-->
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ad, accusantium fuga ipsum tempore maxime cupiditate reprehenderit enim!</p>
+        <div class="link">
+          <a href="#"><img src="images/facebook_b.png" alt="facebook"></a>
+          <a href="#"><img src="images/pinterest_b.png" alt="pinterest"></a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <img src="http://picsum.photos/160" alt=""><!--이미지 태그에 alt빼면 에러-->
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ad, accusantium fuga ipsum tempore maxime cupiditate reprehenderit enim!</p>
+        <div class="link">
+          <a href="#"><img src="images/facebook_b.png" alt="facebook"></a>
+          <a href="#"><img src="images/pinterest_b.png" alt="pinterest"></a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <img src="http://picsum.photos/160" alt=""><!--이미지 태그에 alt빼면 에러-->
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ad, accusantium fuga ipsum tempore maxime cupiditate reprehenderit enim!</p>
+        <div class="link">
+          <a href="#"><img src="images/facebook_b.png" alt="facebook"></a>
+          <a href="#"><img src="images/pinterest_b.png" alt="pinterest"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
