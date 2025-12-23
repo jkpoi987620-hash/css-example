@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *{margin: 0; padding: 0;}
+    *{margin: 0; padding: 0;}/*전부 초기화 시키고 시작*/
     a{text-decoration: none; color: inherit;}
     body{
       color: #333;
@@ -47,17 +47,17 @@
     }
   </style>
 </head>
-<body>
-  <div class="container clearfix">
-    <div class="box">
-      <img src="http://picsum.photos/160" alt=""><!--이미지 태그에 alt빼면 에러-->
-      <div class="txt">
-        <h2>Segment Title</h2>
+<body><!--박스로 계속 감싸주는걸 생각하자-->
+  <div class="container clearfix"><!--4개를 복붙했으니 그4개 이미지와 내용을 한번에 감싸는 박스를 만들었다-->
+    <div class="box"><!--이미지와 글씨를 넣는 박스를 감싸는 박스를 만들었다-->
+      <img src="http://picsum.photos/160" alt=""><!--이미지 태그에 alt빼면 에러--><!--이미지를 넣는 박스틀-->
+      <div class="txt"><!--글씨 만드는 박스틀-->
+        <h2>Segment Title</h2><!--제목 강조하는 글긔-->
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Ad, accusantium fuga ipsum tempore maxime cupiditate reprehenderit enim!</p>
-        <div class="link">
-          <a href="#"><img src="images/facebook_b.png" alt="facebook"></a>
-          <a href="#"><img src="images/pinterest_b.png" alt="pinterest"></a>
+          Ad, accusantium fuga ipsum tempore maxime cupiditate reprehenderit enim!</p><!--내용을 만드는 작은 글긔-->
+        <div class="link"><!--안에 내가 저장한 사진을 넣기위한 링크 박스틀-->
+          <a href="#"><img src="images/facebook_b.png" alt="facebook"></a><!--링크 박스틀 안에 있는 내 폴더 링크 이미지들-->
+          <a href="#"><img src="images/pinterest_b.png" alt="pinterest"></a><!--링크 박스틀 안에 있는 내 폴더 링크 이미지들-->
         </div>
       </div>
     </div>

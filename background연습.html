@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .background-single {
+      background-position: center;
+      background-size: cover;
+      background-image: url(http://picsum.photos/id/1/800/600);
+      border: 1px solid red;
+      width: 100%;
+      height: 400px;
+
+    }
+
+    .background-color-image {
+      background-image: url(http://picsum.photos/id/22/800/600);
+      background-color: rgba(255, 0, 0, 0.3);
+      background-blend-mode: overlay;
+      border: 1px solid red;
+      width: 100%;
+      height: 400px;
+      background-size: cover;
+
+    }
+    .background-color-image:hover{
+      background-blend-mode: overlay;
+    }
+
+    .background-multiple {
+      background-size: 200px, cover;
+      background-position:center, top left;
+      background-repeat: no-repeat;
+      background-image: url(images/Thanks.png), url(images/bokeh.jpg);
+      border: 1px solid red;
+      width: 100%;
+      height: 400px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background-single"></div>
+  <div class="background-color-image"></div>
+  <div class="background-multiple"></div>
+</body>
+
+</html>

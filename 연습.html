@@ -5,18 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    ul,li{list-style: none;}/*메뉴창 옆에 붙어있는 점땡이 사라짐*/
-    
+    *{margin: 0; padding: 0;}
+    body{
+      color: burlywood;
+    }
+    .container{
+      width: 1080px;
+      margin: auto;
+    }
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .container>.box{
+      width: 520px;
+      float: left;
+      margin: 0 10px 40px;
+    }
+    .box>img{
+      float: left;
+    }
   </style>
 </head>
 <body>
-  <div class="content">
-    <ul>
-      <li><a href="#">메뉴</a></li>
-      <li><a href="#">메뉴</a></li>
-      <li><a href="#">메뉴</a></li>
-      <li><a href="#">메뉴</a></li>
-    </ul>
+  <div class="container clearfix">
+    <div class="box">
+      <img src="http://picsum.photos/160" alt="">
+      <div class="txt">
+        <h2>TEMPUR BED</h2>
+        <p>수면을 책임지는 침대</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="http://picsum.photos/160" alt="">
+      <div class="txt">
+        <h2>TEMPUR BED</h2>
+        <p>수면을 책임지는 침대</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="http://picsum.photos/160" alt="">
+      <div class="txt">
+        <h2>TEMPUR BED</h2>
+        <p>수면을 책임지는 침대</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="http://picsum.photos/160" alt="">
+      <div class="txt">
+        <h2>TEMPUR BED</h2>
+        <p>수면을 책임지는 침대</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
