@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
+  <link href="reset.css" rel="stylesheet">
+
+  <style>
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: inherit;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    /*메안 요소의 높이를 100%로 설정하기 위해서...*/
+    main {
+      width: 100%;
+      min-width: 1200px;
+      height: 100%;
+      background: url(images/main.jpg) center/cover;
+    }
+
+    main>.container {
+      width: 1200px;
+      height: 100%;
+      margin: auto;
+      padding: 0 10px;
+      color: #fff;
+      position: relative;
+    }
+
+    main nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    main nav .logo {
+      font-size: 36px;
+    }
+
+    main nav .gnb {
+      display: flex;
+      font-size: 14px;
+      gap: 50px;
+    }
+
+    main nav .gnb a {
+      padding-bottom: 5px;
+    }
+
+    main nav .gnb a:hover {
+      border-bottom: 2px solid #fff;
+    }
+
+    .txt{
+      /*가운데 정렬*/
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /*=========================*/
+      text-align: center;
+      font-size: 36px;
+      white-space: nowrap;/*줄바꿈을 허용하지 않는다*/
+
+    }
+
+    .txt h2 {
+      font-size: 36px;
+    }
+
+    .txt .btn {
+      margin-top: 40px;
+    }
+
+    .txt button {
+      font-size: 36px;
+      margin: 0 10px;
+    }
+    main .dot{
+      position: absolute;
+      bottom: 20px;
+      left: 50%; transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+    }
+    main .dot>li{
+      width: 15px; height: 15px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+    }
+    main .dot>li.active{
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <nav>
+        <h1 class="logo"><a href="#">
+            <i class="fas fa-theater-masks"></i>
+          </a></h1>
+        <ul class="gnb">
+          <li><a href="#">about</a></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">portfolio</a></li>
+          <li><a href="#">board</a></li>
+          <li>
+            <album href="#">album</a>
+          </li>
+          <li>
+            <contact href="#">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="txt">
+        <h2>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit.</h2>
+        <div class="btn">
+          <button type="button"><i class="fas fa-chevron-left"></i></button>
+          <button type="button"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <ul class="dot">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </main>
+</body>
+
+</html>

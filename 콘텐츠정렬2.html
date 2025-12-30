@@ -21,6 +21,7 @@
       float: left;
       margin: 0 10px;
       position: relative;/*pos:abs를 적용한 자식요소의 기준이 됨*/
+      overflow: hidden;/*요소 밖으로 넘어가는 자식요소를 가려줌*/
     }
     .box>img{display: block;}
     .box>.txt{
@@ -29,7 +30,18 @@
       color: #fff;
       inset: 0;/*position속성을 적용한 부모 (조상) 요소의 크기로 설정*/
       padding: 30px 20px;
-      display: none;/*화면에서 제거*/
+      /*display: none;*//*화면에서 제거*/
+      opacity: 0;/*투명하게 설정*/
+      transform: scale(0) rotate(-720deg);/*크기를 0으로 설정 각도는-720도*/
+      transition: 0.5s;
+    }
+    .box:nth-child(2)>.txt{
+      opacity: 1;
+      transform: translateY(-100%);/*아래에서 위로 올라오는 효과를 준다
+      값에따라 위에서 아래로 나오기도 함*/
+    }
+    .box:nth-child(2):hover>.txt{
+      transform: translateY(0);
     }
     .txt>h2{
       font-size: 24px;
@@ -43,7 +55,9 @@
 
     /*.box에 마우스를 올리면 .txt가 화면에 나타나는 효과*/
     .box:hover>.txt{
-      display: block;
+      opacity: 1;
+      transform: scale(1) rotate(0deg);/*커지면서 나타남 각도 변형으로 회전하면서 나탐남*/
+      /*display: block;*/
     }
   </style>
 </head>

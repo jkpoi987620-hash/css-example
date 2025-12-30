@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내비게이션연습(flex)</title>
+  <!--rest.css리셋담은 파일 링크로 쓰기-->
+  <link href="reset.css" rel="stylesheet">
+  <style>
+    nav{
+      width: 100%;
+      min-width: 1200px;
+      background-color: #333;
+      color: #fff;
+    }
+    nav>.container{
+      width: 1200px;
+      height: 120px;
+      margin: auto;
+      padding: 0 10px;
+      display: flex;/*플렉스 적용*/
+      justify-content: space-between;/*주축정렬*/
+      align-items: center;/*교차축정렬*/
+    }
+    .gnb{
+      display: flex;
+      gap: 60px;/*아이템사이 간격을 60px로 설정*/
+    }
+    .gnb>li{
+      /*margin-right: 60px; 이렇게 해도 상관없음*/
+    }
+    .gnb li i{
+      color: aquamarine;
+      font-size: 30px;
+    }
+
+    .search i{
+      font-size: 20px;
+    }
+  </style>
+  <!--폰트어썸 CDN-->
+  <script src="https://kit.fontawesome.com/632d3e2496.js"  crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <ul class="gnb">
+        <li><a href="#"><i class="fab fa-reddit"></i></a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">BOARD</a></li>
+        <li><a href="#">ALBUM</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <div class="search">
+        <a href="#"><i class="fas fa-search"></i></a><!--아이콘-->
+      </div>
+    </div>
+  </nav>
+</body>
+</html>

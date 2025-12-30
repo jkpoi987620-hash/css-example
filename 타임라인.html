@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타임라인</title>
+  <style>
+    /*패딩과 보더 값을 위드와 하이트 안쪽으로 적용*/
+    *{box-sizing: border-box;}
+    body{
+      background-color: #474e5d;
+      font-family: Helvetica, sans-serif;
+    }
+    .timeline{
+      position: relative;
+      max-width: 1200px;
+      margin: auto;
+    }
+    /*수직선*/
+    .timeline::after{
+      content: "";
+      position: absolute;/*pos:abs를 적용하면 디스플레아가 블록으로 설정*/
+      width: 6px;
+      background-color: white;
+      top: 0; bottom: 0;/*높이를 부모 요소의 높이만큼 채움*/
+      /*가로 가운데 정렬*/
+      left: 50%; margin-left: -3px;
+    }
+    .container{
+      width: 50%;
+      padding: 10px 40px;
+      position: relative;
+    }.content{
+      padding: 20px 30px;
+      background-color: white;
+      border-radius: 6px;
+      position: relative;
+    }
+    .left{left: 0;}
+    /*right클래스를 적용한 요소를 오른쪽으로 이동시킴*/
+    .right{left: 50%;}
+
+    /*포인터(동그라미)*/
+    .container::after{
+      content: "";
+      position: absolute;
+      width: 25px; height: 25px;
+      background-color: white;
+      border: 4px solid #ff9f55;
+      border-radius: 50%;
+      top: 15px;
+      right: -16px;
+      z-index: 1;/*선에 가려지지않게 z-index설정*/
+    }
+    .right::after{
+      left: -16px;
+    }
+    /*삼각형*/
+    .left::before{
+      content: "";
+      position: absolute;
+      width: 0; height: 0;
+      border: 10px solid transparent;
+      border-left-color: white;
+      top: 22px;
+      right: 20px;
+    }
+    .right::before{
+      content: "";
+      position: absolute;
+      width: 0; height: 0;
+      border: 10px solid transparent;
+      border-right-color: white;
+      top: 22px;
+      left: 20px;
+    }
+
+    /*미디어 쿼리*/
+    @media screen and (max-width:600px){
+      /*뷰포트가 600px 이하일 경우 적용*/
+      .timeline::after{left: 30px;}
+      .container{
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .right{left: 0;}
+      /*동그라미*/
+      .container::after{
+        left: 14px;
+      }
+      /*삼각형*/
+      .container::before{
+        left: 50px;
+        border: 10px solid transparent;
+        border-right-color: white;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h2>2025</h2>
+        <p>더미.....</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2024</h2>
+        <p>더미.....</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2023</h2>
+        <p>더미.....</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2022</h2>
+        <p>더미.....</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2021</h2>
+        <p>더미.....</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2020</h2>
+        <p>더미.....</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
+  <link href="reset.css" rel="stylesheet">
+  <style>
+    #side-nav{
+      position: fixed;
+      left: 0; top: 0;
+    }
+    #side-nav a{
+      display: block;
+      width: 130px;
+      padding: 15px;
+      margin-top: 10px;
+      /*왼상 우상 우하 왼하 로 들어감큐비(시계방향)*/
+      border-radius: 0 5px 5px 0;
+      transform: translateX(-100px);
+      color: #fff;
+      /*변환효과 적용*/
+      transition: .3s cubic-bezier(1,-0.83,.19,1.88);
+    }
+    #side-nav a:hover{/*마우스를 올리면 브라우저 안쪽으로 버튼이 슬이드 되면서 나타남*/
+      transform: translateX(0);
+    }
+
+    #about{background-color: #4caf50;}
+    #blog{background-color: #2196f3;}
+    #projects{background-color: #f44336;}
+    #contact{background-color: #fb0;}
+  </style>
+</head>
+<body>
+  <div id="side-nav">
+    <a href="#" id="about">About</a>
+    <a href="#" id="blog">Blog</a>
+    <a href="#" id="projects">Projects</a>
+    <a href="#" id="contact">Contact</a>
+  </div>
+</body>
+</html>

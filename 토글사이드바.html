@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>토글 사이드바</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    a{text-decoration: none; color: inherit;}
+
+    .side-bar{
+      position: absolute;
+      width: 300px;
+      height: 100%;
+      background-color: #afafaf;
+      left: -270px;/*270px만큼 왼쪽으로 이동시켜 브라우저 밖으로 가려줍니다*/
+
+      /*레프트속성과 백그라운드컬러 속성에 변환 효과 적용*/
+      transition: left .3s, background-color .3s;
+    }
+    .side-bar:hover{/*사이드바에 마우스를 올리면 사이드바가 화면에 나타남*/
+      color: #fff;
+      background-color: black;
+      left: 0;
+    }
+    .status-icon>div{
+      padding: 6px;
+      text-align: right;
+    }
+    .status-icon>div:last-child{
+      display: none;/*아래 방향 화살표 아이콘은 가려줍니다*/
+    }
+    /*사이드바에 마우스를 올리면 오른쪽 화살표는 가려주고 아래 화살표는 
+    표시해줍니다*/
+    .side-bar:hover>.status-icon>div:first-child{display: none;}
+
+    .side-bar:hover>.status-icon>div:last-child{display: block;}
+
+    /*nav부분*/
+    .menu-box>ul>li>a{
+      display: block;
+      padding: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      color: inherit;
+    }
+    .menu-box>ul>li>a:hover{
+      background-color: white;
+      color: black;
+    }
+    /*가상요소*/
+    /*only = 외동아들*/
+    /*not(선택 요소) = 선택된 요소를 제외시킴*/
+    .menu-box ul>li>a:not(:only-child)::after{
+      /*형제가 없는 a 요소는 제외하고 "[+]"를 붙임*/
+      content: "[+]";
+    }
+    /*메뉴에 마우스를 올리면 +가-로 변경*/
+    .menu-box>ul>li:hover>a:not(:only-child)::after{
+      content: "[-]";
+    }
+
+    .sub{
+      display: none;
+      background-color: #afafaf;
+    }
+    .side-bar>.menu-box>ul>li:hover>.sub{
+      display: block;
+    }
+    .sub a{
+      display: block;
+      padding: 10px;
+    }
+    .sub a:hover{
+      background-color: beige;
+      color: black;
+    }
+    .sub>li{
+      position: relative;/*pos:abs를 적용한 자식요소의 기준이됨*/
+    }
+    /*3차메뉴*/
+    .sub2{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: black;
+      width: 170px;
+    }
+    /*2depth메뉴에 마우스를 올리면 3depth메뉴가 나타남*/
+    .sub>li:hover>.sub2{
+      display: block;
+    }
+    .sub2>li>a{
+      white-space: nowrap;/*줄바꿈 허용하지 않겠다*/
+    }
+  </style>
+</head>
+<body>
+  <div class="side-bar">
+    <div class="status-icon">
+      <div>▶</div>
+      <div>▼</div>
+    </div>
+    <nav class="menu-box">
+      <ul>
+        <li>
+          <a href="#">1차 메뉴 아이템1</a>
+          <ul class="sub">
+            <li>
+              <a href="#">2차 메뉴 아이템1</a>
+              <ul class="sub2">
+                <li><a href="#">3차 메뉴 아이템1</a></li>
+                <li><a href="#">3차 메뉴 아이템2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">2차 메뉴 아이템2</a></li>
+            <li><a href="#">2차 메뉴 아이템3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">1차 메뉴 아이템2</a>
+          <ul class="sub">
+            <li><a href="#">2차 메뉴 아이템1</a></li>
+            <li><a href="#">2차 메뉴 아이템2</a></li>
+            <li><a href="#">2차 메뉴 아이템3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">1차 메뉴 아이템3</a></li>
+        <li>
+          <a href="#">1차 메뉴 아이템4</a>
+          <ul class="sub">
+            <li><a href="#">2차 메뉴 아이템1</a></li>
+            <li><a href="#">2차 메뉴 아이템2</a></li>
+            <li><a href="#">2차 메뉴 아이템3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>

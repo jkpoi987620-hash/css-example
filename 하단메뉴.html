@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    a{text-decoration: none; color: inherit;}
+
+    /*최상위 요소에 하이트 값을 100%로 설정하고 자식요소에 하이트 값을 100%로 설정하면 자식요소는 브라우저의 높이값으로 설정됨*/
+    html,body{height: 100%;}
+
+    #container{
+      width: 100%;
+      min-width: 1000px;
+      height: 100%;
+      min-height: 768px;
+      /*100vh 뷰포트 높이의 100%크기로 설정*/
+      /*위드는 100%가 적용 되지만 하이트는x*/
+      background: url(images/bg.png) center/cover;
+      position: relative;/*pos:abs를 적용한 자식요소의 기준이 됨*/
+    }
+    .title{
+      color: #fff;
+      position: absolute;
+      /*pos:abs를 적용한 요소의 가운데 정렬*/
+      left: 50%; top: 50%;
+      /*요소의 넓이와 높이의 절반값만큼 왼쪽 상단으로 이동시킴*/
+      transform: translate(-50%,-50%);
+      text-align: center;
+    }
+    .title p{
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 50px;
+      line-height: 2.0;
+    }
+    #container nav{
+      position: absolute;
+      left: 0; bottom: 0;
+      color: #fff;
+      padding: 20px 0;
+      background-color: rgb(108, 47, 108);
+      width: 100%;
+      text-align: center;
+    }
+    nav a{
+      font-size: 15px;
+      font-weight: bold;
+      margin: 0 55px;
+    }
+  </style>
+</head>
+<body>
+  <section id="container">
+    <div class="title">
+      <h1 class="logo"><img src="images/logo_b.png"></h1>
+      <p>Lorem ipsum dolor sit amet<br> consectetur, adipisicing elit. Nam, incidunt.</p>
+    </div>
+    <nav>
+      <a href="#">about</a>
+      <a href="#">news</a>
+      <a href="#">portfolio</a>
+      <a href="#">board</a>
+      <a href="#">album</a>
+      <a href="#">contact</a>
+    </nav>
+  </section>
+</body>
+</html>

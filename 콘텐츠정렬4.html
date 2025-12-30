@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콘텐츠정렬4</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    ul,li{list-style: none;}
+    .clearfix::after{
+      display: block;
+      content: "";
+      clear: both;
+    }
+    .container{
+      width: 1200px;
+      height: 760px;
+      margin: auto;
+      /*배경이미지 위에 반투명한 흰색의 그라디언트를 적용하여 이미지를 밝게 보정할 수 있다*/
+      background:linear-gradient(0deg, rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url(images/s1.jpg) center/cover;
+      position: relative;/*pos:abs를 적용한 자식요소의 기준이 됨*/
+    }
+    .title{
+      padding-top: 160px;
+      text-align: center;
+    }
+    .title>h1{
+      font-size: 72px;
+      line-height: 1;
+    }
+    .title>p{
+      font-size: 14px;
+      margin: 40px 0 80px;
+    }
+
+    .thumbs{
+      width: 100%;
+    }
+    .thumbs>li{
+      width: 33.3333%;
+      float: left;
+      background-color: #ddd;
+      color: #333;
+      position: relative;/*pos:abs를 적용한 자식요소의 기준이 됨*/
+    }
+    .thumbs .thumb-img{
+      width: 50%;
+      float: left;
+      margin: 40px 0px;
+      padding: 0 10px;
+    }
+    .thumb-img img{
+      width: 100%;
+      display: block;
+    }
+    .thumbs .txt{
+      float: left;
+      width: 50%;
+      margin: 40px 0px;
+      padding: 0 10px;
+    }
+    .thumbs .txt h2{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .thumbs .txt p{
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .thumbs>li:hover{
+      background-color: #999;
+      color: #fff;
+      cursor: pointer;/*누를수있게 만들기*/
+      user-select: none;/*긁는거 불가능하게 만들기*/
+    }
+
+    /*삼각형*/
+    .thumbs>li:hover::after{
+      content: "";/*이걸 꼭 넣어줘야함*/
+      width: 0;
+      height: 0;
+      position: absolute;
+      border: 10px solid transparent;
+      border-bottom-color: #999;
+      left: 50%; margin-left: -10px;
+      top: -20px;
+    }
+  </style>
+</head>
+<body>
+  <section class="container"><!--전체를 감싸는 배경 툴-->
+    <div class="title"><!--글씨를 넣는 박스-->
+      <h1>Division Title</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> 
+        Odio, nisi.djasdjasjdalsdj
+      </p>
+    </div>
+    <ul class="thumbs clearfix"><!--사진과 글씨를 넣는 박스-->
+      <li><!--그안에 사진을 넣는 박스-->
+        <div class="thumb-img"><img src="images/s1.jpg" width="180" height="120" alt=""></div>
+        <div class="txt"><!--그 안에 글씨를 넣는 박스-->
+          <h2>DESCRIPTION</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nulla.</p>
+        </div>
+      </li>
+      <li>
+        <div class="thumb-img"><img src="images/s2.jpg" width="180" height="120" alt=""></div>
+        <div class="txt">
+          <h2>DESCRIPTION</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nulla.</p>
+        </div>
+      </li>
+      <li>
+        <div class="thumb-img"><img src="images/s3.jpg" width="180" height="120" alt=""></div>
+        <div class="txt">
+          <h2>DESCRIPTION</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nulla.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+</body>
+</html>

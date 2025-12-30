@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그라디언트 속성</title>
+  <style>
+    /*linear-gradient(각도, 색상위치, 색상위치,...) : 선형 그라디언트(위치값 생략 가능)
+    radial-gradient(45deg, red 0%, blue 50%, yllow 100%) : 원형 그라디언트*/
+    .gradient1{
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 60px;
+      text-align: center;
+      background-color: yellow;
+      /*그라디언트*/
+      background: linear-gradient(0deg, #f85032 0%, #f16f5c 50%, #f6290c 51%, #e73827 100%);
+
+      /*그라디언트 */
+      background: #9b922a;
+      background: linear-gradient(90deg,rgba(155, 146, 42, 1) 0%, rgba(237, 163, 83, 1) 100%);
+    }
+
+    .gradient2{
+      width: 300px;
+      height: 300px;
+      /*repeating-linear-gradient:반복 그라디언트*/
+      background: 
+      repeating-linear-gradient(45deg, red, orange 50px);
+    }
+  </style>
+</head>
+<body>
+  <div class="gradient1">
+    <h1>CSS3 Gradient</h1>
+  </div>
+
+  <div class="gradient2"></div>
+</body>
+</html>

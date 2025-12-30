@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--css외부정의-->
+  <!--<link href="reset.css"-->
+  <style>
+    /*외부문서를 내부로 링크*/
+    @import url(reset.css);
+    .nav{
+      background-color: #afafaf;
+      display: flex;
+      justify-content: flex-end/*오른쪽(하단)정렬*/;
+      
+    }
+    .nav>li>a{
+      display: block;
+      padding: 20px;
+      font-weight: bold;
+    }
+    .nav>li>a:hover{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <ul class="nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</body>
+</html>

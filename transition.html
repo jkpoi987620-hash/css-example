@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 100%;/*위드를 100%로 지정하면 트랜지션이 적용된다*/
+      height: 100px;
+      background-color: #afafaf;
+      opacity: .3;
+      /*변환효과:(배경색이 변경되면 0.5초에 걸쳐 변경됨)*/
+      transition: background-color 0.5s;
+    }
+    div:hover{
+      background-color: gold;
+      width: 50%;
+      /*위드에도 트랜지션을 주었지만 효과가 적용되지 않는이유는 디브의 위드가 오토 이기 때문이다, 트랜지션을 적용하려면 크기(값)를 명확히 지정해야함*/
+      transition: background-color 2s, width 2s, opacity 2s;
+      opacity: 1;
+      /*따로 줄거면 위 처럼 따로따로 적용해야함*/
+
+      /*all(생략가능) = 모든 속성에 트랜지션을 적용*/
+      transition: 2s;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <hr>
+  <div></div>
+</body>
+</html>

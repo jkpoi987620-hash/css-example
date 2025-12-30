@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+
+    .login{
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .login>.container{
+      width: 300px;
+      background-color: #fff;
+      margin: 100px auto 0;
+    }
+    .closeBtn{
+      width: 100%;
+      text-align: right;
+      border-bottom: 1px solid #999;
+    }
+    .closeBtn>button{
+      font-size: 20px;
+      font-weight: bold;
+      color: #666;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .login form{
+      width: 100%;
+      padding: 30px 40px;
+    }
+    label{
+      font-size: 14px;
+      color: #333;
+    }
+    input[type=text], input[type=password]{
+      width: 100%;
+      height: 40px;
+      background-color: #f1f1f1;
+      margin-bottom: 20px;
+      border: 1px solid #999;
+      outline: none;
+      padding: 10px;
+      color: #333;
+    }
+    input[type=submit]{
+      width: 100%;
+      height: 30px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <div class="container">
+      <div class="closeBtn">
+        <button type="button">&times;</button>
+      </div>
+
+      <form>
+        <label for="user">사용자명 또는 이메일 주소</label>
+        <input type="text" name="user" id="user" required>
+        <label for="pw">암호</label>
+        <input type="password" name="pw" id="pw" required>
+        <input type="submit" value="로그인">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

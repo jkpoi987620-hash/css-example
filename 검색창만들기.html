@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
+  <link href="reset.css" rel="stylesheet">
+  <style> 
+    #search-section{
+      width: 100%;
+      height: 500px;
+      background: #38507b url(images/searchbg.jpg) center/cover;
+      line-height: 1.6;
+      padding-top: 80px;
+    }
+    #search-section>.wrap{
+      width: 800px;
+      margin: auto;
+      color: #fff;
+      text-align: center;
+    }
+    #seach-section h1{
+      font-size: 32px;
+    }
+    #search-section h2{
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    #search-section h2 b{
+      font-weight: 700;
+    }
+    #search-section p{
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    form{
+      width: 100%;
+      display: flex;
+    }
+    form>input{
+      width: 740px;
+      height: 60px;
+      padding: 20px;
+      border: none;
+      outline: none;
+    }
+    form>button{
+      width: 60px;
+      height: 60px;
+      background-color: #fff;
+      color: #111;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .popular{
+      width: 100%;
+      height: 20px;
+      line-height: 20px;
+      margin-top: 10px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+    .popular>li{
+      margin-right: 10px;
+    }
+    .ranking{
+      display: flex;
+    }
+    .index{
+      width: 18px;
+      line-height: 18px;
+      background-color: #fff;
+      color: #111;
+      text-align: center;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <section id="search-section">
+    <div class="wrap">
+      <h1>공연예술 아카이브 네트워크 통합 검색</h1>
+      <h2><b>K</b>orea <b>P</b>erforming <b>A</b>rt 
+      <b>A</b>rchives <b>N</b>etwork</h2>
+
+      <p>
+        국립국악원, 국립극장, 국립무형유산원, 한국문화 예술위원회 등 4개 기관의<br>공연예술 아카이브를 통합 검색하여 편리하게 이용할 수 있습니다
+      </p>
+
+      <form>
+        <input type="text">
+        <button><i class="fas fa-search"></i></button>
+      </form>
+
+      <ul class="popular">
+        <li class="bm">
+          <i class="fas fa-bookmark">인기검색어</i>
+        </li>
+        <li class="ranking">
+          <div class="index">1</div>
+          <div class="txt">판소리</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

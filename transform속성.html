@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin-bottom: 100px;
+    }
+    .box1{
+      /*translate : 위치이동*/
+      transform: translateX(100px);
+      /*x축으로 100px 이동*/
+      transform: translateY(100px);
+      /*y축으로 100px 이동*/
+      transform: translate(100px, 100px);
+      /*x,y축으로 100px 이동*/
+    }
+    .box2{
+      /*scale : 크기변환*/
+      transform: scaleX(1.5);
+      /*x축으로 1.5배 확대*/
+      transform: scaleY(1.5);
+      /*y축으로 1.5배 확대*/
+      transform: scale(1.5);
+      /*1.5배 확대*/
+    }
+    .box3{
+      /*rotate : 각도변환*/
+      transform: rotateX(45deg);
+      /*x축으로 45도 회전*/
+      transform: rotateY(45deg);
+      /*y축으로 45도 회전*/
+      transform: rotate(45deg);
+      /*45도 회전*/
+
+    }
+    .box4{
+      /*skew : 기울기 변환*/
+      transform: skewX(20deg);
+      /*x축으로 20도 기울이기*/
+      transform: skewY(20deg);
+      /*y축으로 20도 기울이기*/
+    }
+    .box5{
+      /*여러 변형 조합*/
+      transform: translateX(50px) rotate(30deg) scale(1.2);
+      /*여러 트랜스폼 속성을 줄거면 위처럼 해주자*/
+    }
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+  <div class="box4"></div>
+  <div class="box5"></div>
+</body>
+</html>

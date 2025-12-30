@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메가메뉴</title>
+  <style>
+    *{box-sizing: border-box;}
+    body{margin: 0;}
+    ul,li{
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    a{text-decoration: none; color: inherit;}
+    button{
+      background-color: transparent;
+      border: 0;
+      outline: none;
+      font-size: 16px;
+      padding: 0;
+      cursor: pointer;
+    }
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+    }/*초기화 과정*/
+
+    .navbar{
+      background-color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .gnb>li{
+      float: left;
+      color: black;
+      font-size: 16px;
+      
+    }
+    .gnb a, .gnb .dropbtn{
+      display: block;
+      padding: 14px 16px;
+      color: white;
+    }
+    /*하이라이트 효과*/
+    .gnb a:hover, .gnb .dropbtn:hover{
+      background-color: orange;
+    }
+
+    .dropdown-content{
+      display: none;
+      position: absolute;
+      /*브라우저 기준으로 전체 넓이로 줘야하기 때문에 부모요소인 li요소에 position: relative;를 줘야함*/
+      width: 100%;
+      background-color: #f9f9f9;
+      left: 0;
+      z-index: 1;/*다른 요소에 안가려지게*/
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    /*드롭다운 메뉴에 마우스를 올리면 메가메뉴가 나타남*/
+    .dropdown:hover .dropdown-content{display: block;}
+
+    .dropdown-content .header{
+      background-color: orange;
+      padding: 16px;
+      color: white;
+    }
+    .column{
+      float: left;
+      width: 33.3333%;
+      height: 250px;
+      padding: 10px;
+      background-color: #ccc;
+    }
+    .column a{
+      color: black;
+    }
+    .column a:hover{
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="gnb clearfix">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <div class="header">
+            <h2>Mega_Menu</h2>
+          </div>
+          <ul class="row clearfix">
+            <li class="column">
+              <h3>sub 1</h3>
+              <a href="#">Link1</a>
+              <a href="#">Link2</a>
+              <a href="#">Link3</a>
+            </li>
+            <li class="column">
+              <h3>sub 2</h3>
+              <a href="#">Link1</a>
+              <a href="#">Link2</a>
+              <a href="#">Link3</a>
+            </li>
+            <li class="column">
+              <h3>sub 3</h3>
+              <a href="#">Link1</a>
+              <a href="#">Link2</a>
+              <a href="#">Link3</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div style="padding: 16px;">
+    <h3>네비게이션 바에서 전체 너비 서브메뉴 드롭다운</h3>
+    <p>'드롭 다운' 링크 위로 마우스 이동하면 서브메뉴가 표시됩니다</p>
+  </div>
+</body>
+</html>
