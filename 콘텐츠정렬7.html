@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="reset.css" rel="stylesheet">
+  <style>
+    section{
+      width: 100%;
+      min-width: 1200px;
+      background-image: url(images/bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    section>.container{
+      width: 1200px;
+      margin: auto;
+      padding: 40px 10px;
+      display: flex;
+      justify-content: space-between;/*양쪽 끝으로 정렬*/
+    }
+    .center{
+      
+      width: 580px;
+      height: 520px;
+      background: url(images/car.png) center/cover;/*이미지가 틀어질수도 있기때문에 센터에 커버까지 준다*/
+      padding: 0 14px;
+    }
+    .center h1{
+      font-size: 60px;
+      color: #5faad9;
+      text-align: center;
+      letter-spacing: -1px;
+      padding-top: 80px;
+      text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);/*글자에 그림자 넣기*/
+      line-height: 1.1;/*행간 수정*/
+    }
+    .center h1 b{
+      font-weight: normal;
+      font-size: 42px;
+    }
+    .left, .right{
+      width: 280px;
+    }
+    .left>.box, .right>.box{
+      width: 280px;
+      height: 240px;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;/*세로정렬*/
+      justify-content: space-between;/*아이템을 위아래 끝으로 붙여서 정렬*/
+    }
+    .left>.box:first-child,
+    .right>.box:first-child{
+      margin-bottom: 40px;/*첫번째 박스 요소만 선택해서 하단여백주기*/
+    }
+
+    .box>div{
+      display: flex;
+      justify-content: space-between;
+    }
+    .box>.txt{
+      color: #999;
+      font-size: 14px;
+    }
+    .box>.number{
+      align-items: flex-end;
+    }
+    .box>.number>p:first-child{
+      line-height: 1;
+      font-size: 60px;
+      font-weight: bold;
+      color: #5faad9;
+    }
+    .box>.number>p:last-child{
+      font-size: 30px;
+      color: #666;
+      line-height: 1;
+      margin-right: 20px;
+      font-weight: 500;
+    }
+    </style>
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="left">
+        <div class="box">
+          <div class="txt">
+            <p>아름답고 열매를 곳으로<br>
+              목숨이 봄바람이다.</p>
+              <img class="icon" src="images/icon.png" alt="">
+          </div>
+          <div class="number">
+            <p>15</p>
+            <p>건</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="txt">
+            <p>아름답고 열매를 곳으로<br>
+              목숨이 봄바람이다.</p>
+              <img class="icon" src="images/icon.png" alt="">
+          </div>
+          <div class="number">
+            <p>15</p>
+            <p>건</p>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <h1>
+          <b>도로위의 잔혹사</b> <br>
+          로드킬(RDOAD KILL)
+        </h1>
+      </div>
+      <div class="right">
+        <div class="box">
+          <div class="txt">
+            <p>아름답고 열매를 곳으로<br>
+              목숨이 봄바람이다.</p>
+              <img class="icon" src="images/icon.png" alt="">
+          </div>
+          <div class="number">
+            <p>15</p>
+            <p>건</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="txt">
+            <p>아름답고 열매를 곳으로<br>
+              목숨이 봄바람이다.</p>
+              <img class="icon" src="images/icon.png" alt="">
+          </div>
+          <div class="number">
+            <p>15</p>
+            <p>건</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="reset.css" rel="stylesheet">
+  <style>
+    .container{
+      width: 800px;
+      height: 300px;
+      margin: 20px auto;
+      background-color: #41c4b2;
+      position: relative;
+    }
+    .container>.img-group{
+      width: 380px;
+      height: 100%;
+      position: relative;
+    }
+    .cloud{
+      position: absolute;
+      left: 40px; top: 44px;
+    }
+    .man{
+      position: absolute;
+      left: 0; top: 46px;
+      animation: updown 2s linear infinite;
+    }
+    @keyframes updown{
+      0%{transform: translateY(-20px);}
+      50%{transform: translateY(20px);}
+      100%{transform: translateY(-20px);}
+    }
+    .mars{
+      position: absolute;
+      top: 48px;
+      right: 12px;
+      animation: rotate 2s linear infinite;
+    }
+    @keyframes rotate{
+      0%{transform: rotate(0deg);}
+      50%{transform: rotate(30deg);}
+      100%{transform: rotate(0deg);}
+    }
+    .container>.txt{
+      width: 140px;
+      color: #fff;
+      position: absolute;
+      right: 90px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .txt>h1{
+      font-size: 22px;
+      font-weight: normal;
+      letter-spacing: -1px;
+    }
+    .txt>p{
+      font-size: 12px;
+      word-break: break-all;/*1글자를 기준으로 줄바꿈을 강제로 함(기본값은 단어 기준으로 줄바꿈됨)*/
+      text-align: justify;
+      margin: 20px 0;
+
+    }
+    .txt>button{
+      width: 100%;
+      height: 40px;
+      border: 2px solid #fff;
+      font-size: 14px;
+      letter-spacing: 2px;/*자간넓히기*/
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="img-group">
+      <img class="cloud" src="images/cloud.png" alt="">
+      <img class="man" src="images/space_man.png" alt="">
+      <img class="mars" src="images/mars.png" alt="">
+    </div>
+    <div class="txt">
+      <h1>Space Tourism</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero molestias nostrum corporis ullam exercitationem dolore corrupti neque quam!</p>
+      <button type="button">READ MORE</button>
+    </div>
+  </div>
+</body>
+</html>

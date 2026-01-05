@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커스텀 체크박스</title>
+  <style>
+    .container{
+      user-select: none;
+      display: block;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      position: relative;
+    }
+    /*기본 체크박스 숨기기*/
+    .container input{
+      position: absolute;
+      opacity: 0;
+      width: 0; height: 0;
+    }
+    /*사용자 정의 체크박스*/
+    .checkmark{
+      position: absolute;
+      top: 0; left: 0;
+      width: 25px; height: 25px;
+      background-color: #eee;
+    }
+    /*마우스 호버시 회색 배경색 추가*/
+    .container:hover input+.checkmark{
+      background-color: #ccc;
+    }
+    /*확인란 선택시 파란색 배경을 추가*/
+    .container input:checked+.checkmark{
+      background-color: #2196f3;
+    }
+    /*확인 표시/ 표시기 만들기 (선택하지 않은 경우 숨겨짐)*/
+    .checkmark::after{
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    /*선택시 화면에 표시*/
+    .container input:checked+.checkmark::after{
+      display: block;
+    }
+    /*체크표시*/
+    .container .checkmark::after{
+      left: 9px; top: 5px;
+      width: 5px; height: 10px;
+      border: solid #fff;
+      /*상 우 하 좌(시계방향)*/
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+
+    /*사용자 정의 라디오 버튼*/
+    .circle{
+      border-radius: 50%;
+    }
+    .container .circle::after{
+      top: 7px; left: 7px; width: 8px; height: 8px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <label class="container">
+    One
+    <input type="checkbox" checked>
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">
+    Two
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">
+    Three
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">
+    Four
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">
+    Five
+    <input type="radio">
+    <span class="checkmark circle"></span>
+  </label>
+  <label class="container">
+    Six
+    <input type="radio">
+    <span class="checkmark circle"></span>
+  </label>
+</body>
+</html>

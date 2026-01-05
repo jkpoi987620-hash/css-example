@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>토글스위치</title>
+  <style>
+    .switch{
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    /*체크 박스는 화면에서 제거*/
+    .switch input{display: none;}/*눈에 가려주기*/
+    /*토글 스위치*/
+    .slider{
+      position: absolute;
+      inset: 0;
+      background-color: #ccc;
+      cursor: pointer;
+      transition: .4s;
+    }
+    .slider::before{
+      content: "";
+      position: absolute;
+      width: 26px; height: 26px;
+      background-color: #fff;
+      left: 4px; top: 4px;
+    }
+    input:checked+.slider{/*인풋요소에 체크속성이 적용되면 다음 형제요소인 클래스슬라이더를 선택하여 배경색상을 변경*/
+      background-color: #2196f3;
+    }
+    input:checked+.slider::before{
+      /*체크박스가 체크되면 포인터는 오른쪽으로 보내줍니다*/
+      transform: translateX();
+    }
+    .slider.round{/*라운드추가*/
+      border-radius: 34px;
+    }
+    .slider.round::before{
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+  <label class="switch">
+    <input type="checkbox" checked><!--체크 된 상태로 나옴-->
+    <span class="slider"></span>
+  </label>
+  <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider round"></span>
+  </label>
+</body>
+</html>

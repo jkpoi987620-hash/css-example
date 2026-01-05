@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콘텐츠정렬8</title>
+  <link href="reset.css" rel="stylesheet">
+  <style>
+    .container{
+      width: 1080px;
+      padding: 10px;
+      margin: auto;
+      display: flex;
+      gap: 20px;
+    }
+    .imgGroup img{display: block;}
+    .imgGroup .thumbs{
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+      /*justify-content: space-between; 이렇게 선택해도 된다*/
+      
+    }
+    .imgGroup>.thumbs>li{
+      cursor: pointer;
+      filter: grayscale(100%);/*흑백*/
+    }
+    .imgGroup>.thumbs>li:hover{
+      filter: grayscale(0%);/*컬러*/
+    }
+    .detail>h1{
+      font-size: 36px;
+      line-height: 2.0;/*행간 여백*/
+      color: #333;
+    }
+    .detail>.price{
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+    .detail>.selectGroup{
+      margin: 20px 0;
+      display: flex;
+      gap: 20px;
+    }
+    .selectGroup>select{
+      width: 160px;
+      height: 40px;
+      border: none;
+      background-color: #ccc;
+      padding: 10px;
+    }
+    .detail>.color{
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+    .dot{
+      display: flex;
+      gap: 10px;
+    }
+    .dot>li{
+      width: 20px;
+      height: 20px;
+      background-color: gray;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot>.red{
+      background-color: tomato;
+    }
+    .dot>.yellow{
+      background-color: gold;
+    }
+    .dot>.blue{
+      background-color: skyblue;
+    }
+    .detail>.txt{
+      margin: 40px 0;
+    }
+    .txt>li{
+      border-top: 1px solid #999;
+      border-bottom: 1px solid #999;
+      cursor: pointer;
+    }
+    /*첫번째 li요소의 밑줄을제거*/
+    .txt>li:first-child{
+      border-bottom: 0;
+    }
+    .txt>li>h3{
+      font-size: 14px;
+      line-height: 40px;
+      color: #333;
+    }
+    .txt>li>p{
+      font-size: 14px;
+      line-height: 1.7;
+      color: #666;
+      margin-bottom: 10px;
+      display: none;
+    }
+    .txt>.active>p{/*액티브 클래스가 추가된 li요소의 자식요소인 p요소만 나타나게 함*/
+      display: block;
+    }
+    .detail>.btn{
+      display: flex;
+      gap: 20px;
+    }
+    .btn>button{
+      width: 250px;
+      height: 40px;
+      border: 1px solid #666;
+      font-size: 16px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .btn>button:hover{background-color: #666;
+    color: #fff;}
+  </style>
+</head>
+<body>
+  <section class="container">
+    <article class="imgGroup">
+      <div class="largeImg">
+        <img src="http://picsum.photos/520" alt="">
+      </div>
+      <ul class="thumbs">
+        <li><img src="http://picsum.photos/80"></li>
+        <li><img src="http://picsum.photos/80"></li>
+        <li><img src="http://picsum.photos/80"></li>
+        <li><img src="http://picsum.photos/80"></li>
+        <li><img src="http://picsum.photos/80"></li>
+      </ul>
+    </article>
+    <form class="detail">
+      <h1>Division Title</h1>
+      <p class="price">10,000￦</p>
+      <div class="selectGroup">
+        <select>
+          <option>SIZE</option>
+        </select>
+        <select>
+          <option>QTY</option>
+        </select>
+      </div>
+      <div class="color">
+        <p>COLORS</p>
+        <ul class="dot">
+          <li class="red"></li>
+          <li class="yellow"></li>
+          <li class="blue"></li>
+        </ul>
+      </div>
+      <ul class="txt">
+        <li class="active">
+          <h3>- DESCRIPTION</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, eveniet. Voluptate repellendus dolorum similique accusantium quod eius, error illo laboriosam dolores inventore, porro, deleniti ad minus odit</p>
+          
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, eveniet. Voluptate repellendus dolorum similique accusantium quod eius, error illo laboriosam  minus odit</p>
+        </li>
+        <li>
+          <h3>+ DESCRIPTION</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, eveniet. Voluptate repellendus dolorum similique accusantium quod eius, error illo laboriosam dolores inventore, porro, deleniti ad minus odit</p>
+
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, eveniet. Voluptate repellendus dolorum similique accusantium quod eius, error illo laboriosam  minus odit</p>
+        </li>
+      </ul>
+
+      <div class="btn">
+        <button>BUTTON</button>
+        <button>BUTTON</button>
+      </div>
+    </form>
+  </section>
+</body>
+</html>

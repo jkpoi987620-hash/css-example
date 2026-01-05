@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>svg활용</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+    article {
+      width: 500px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      padding: 50px;
+      margin: auto;
+    }
+
+    article svg {
+      width: 100%;
+    }
+
+    /*부모인 500px에 맞춰 꽉 차게*/
+
+    /*path속성 바꾸기*/
+    article svg path {
+      fill: transparent;
+      /*면색*/
+      stroke: red;
+      /*선색*/
+      stroke-width: 10;
+      /*선의 두께*/
+      stroke-dasharray: 1600;
+      /*path길이 만큼 점선 만들어짐*/
+      stroke-dashoffset: -1600;
+      /*점선의 시작점 위치 변경*/
+      transition: all 3s;
+      /*변환 효과*/
+    }
+
+    article:hover svg path {
+      stroke-dashoffset: 0;
+    }
+    section svg text{
+      stroke-dasharray: 260;
+      stroke-dashoffset: -260;
+      transition: all 3s;
+    }
+    section:hover svg text{
+      stroke-dashoffset: 0;
+    }   
+  </style>
+</head>
+
+<body>
+  <section>
+    <?xml version="1.0" encoding="utf-8"?>
+    <!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" baseProfile="basic" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 300" xml:space="preserve">
+      <style type="text/css">
+        .st0 {
+          fill: none;
+          stroke: #00A651;
+          stroke-width: 3;
+        }
+
+        .st1 {
+          font-family: 'Black Han Sans';
+        }
+
+        .st2 {
+          font-size: 70px;
+        }
+      </style>
+      <text transform="matrix(1 0 0 1 40.3809 147.918)" class="st0 st1 st2">UI/UX 디자인</text>
+    </svg>
+  </section>
+  <article>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 522 522">
+      <!--!Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+      <path
+        d="M256 48c114.953 0 208 93.029 208 208 0 114.953-93.029 208-208 208-114.953 0-208-93.029-208-208 0-114.953 93.029-208 208-208m0-40C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 56C149.961 64 64 149.961 64 256s85.961 192 192 192 192-85.961 192-192S362.039 64 256 64zm0 44c19.882 0 36 16.118 36 36s-16.118 36-36 36-36-16.118-36-36 16.118-36 36-36zm117.741 98.023c-28.712 6.779-55.511 12.748-82.14 15.807.851 101.023 12.306 123.052 25.037 155.621 3.617 9.26-.957 19.698-10.217 23.315-9.261 3.617-19.699-.957-23.316-10.217-8.705-22.308-17.086-40.636-22.261-78.549h-9.686c-5.167 37.851-13.534 56.208-22.262 78.549-3.615 9.255-14.05 13.836-23.315 10.217-9.26-3.617-13.834-14.056-10.217-23.315 12.713-32.541 24.185-54.541 25.037-155.621-26.629-3.058-53.428-9.027-82.141-15.807-8.6-2.031-13.926-10.648-11.895-19.249s10.647-13.926 19.249-11.895c96.686 22.829 124.283 22.783 220.775 0 8.599-2.03 17.218 3.294 19.249 11.895 2.029 8.601-3.297 17.219-11.897 19.249z" />
+    </svg><!--아이콘 크롭으로 열고 우클릭 속성보기 코드 복붙-->
+  </article>
+</body>
+
+</html>

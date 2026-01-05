@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="reset.css" rel="stylesheet">
+  <style>
+    .container{
+      width: 1080px;
+      margin: auto;
+      padding: 0 10px;
+      display: flex;
+      gap: 20px;
+    }
+    .container img{display: block;}/*이미지요소의 여백 제거용(모든 이미지들을 블록 요소로)*/
+    .box{
+      width: 520px;
+    }
+    .box>.content{
+      width: 100%;
+      height: 160px;
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    /*마지막 컨텐츠 요소의 하단여백(20px)을 제거*/
+    .box>.content:last-child{margin-bottom: 0;}
+    .box>.content>.txt{
+      width: 340px;
+      height: 160px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+    .txt>h2{
+      font-size: 14px;
+      line-height: 2;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .txt>p{
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;/*행간*/
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="content">
+        <div class="thumb"><img src="https://picsum.photos/160/160" alt=""></div>
+        <div class="txt">
+          <h2>DESCRIPTION</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet at debitis cumque. Perferendis, in accusantium? Aut reiciendis expedita, quibusdam officia distinctio aliquid perferendis. Atque, eum doloremque! Quisquam iste illo ratione.
+          </p>
+        </div><!--txt-->
+      </div><!--content-->
+      <div class="content">
+        <div class="thumb"><img src="https://picsum.photos/160/160" alt=""></div>
+        <div class="txt">
+          <h2>DESCRIPTION</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet at debitis cumque. Perferendis, in accusantium? Aut reiciendis expedita, quibusdam officia distinctio aliquid perferendis. Atque, eum doloremque! Quisquam iste illo ratione.
+          </p>
+        </div><!--txt-->
+      </div><!--content-->
+      <div class="content">
+        <div class="thumb"><img src="https://picsum.photos/160/160" alt=""></div>
+        <div class="txt">
+          <h2>DESCRIPTION</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet at debitis cumque. Perferendis, in accusantium? Aut reiciendis expedita, quibusdam officia distinctio aliquid perferendis. Atque, eum doloremque! Quisquam iste illo ratione.
+          </p>
+        </div><!--txt-->
+      </div><!--content-->
+    </div><!--box-->
+    <div class="large-img">
+      <img src="https://picsum.photos/520/520" alt="">
+    </div>
+  </div>
+</body>
+</html>

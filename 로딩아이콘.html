@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로딩아이콘</title>
+  <style>
+    .loader{
+      width: 120px;
+      height: 120px;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top-color: #3498db;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin{
+      100%{transform: rotate(360deg);}/*0%는 생략가능(초기값)*/
+    }
+
+    .box{
+      margin-top: 20px;
+      outline: 1px solid red;
+      width: 400px;
+      height: 300px;
+      position: relative;
+      overflow: hidden;/*밖으로 넘치는 부분을 안에 담아줌*/
+    }
+    .rotate{/*가운데 정렬 (크기의 절반값만큼 움직이기)*/
+      width: 500px;
+      height: 500px;
+      position: absolute;
+      left: 50%; top: 50%;
+      margin-left: -250px;
+      margin-top: -250px;
+      background: linear-gradient(0deg, #dc2424, #4a569d);
+      animation: spin 4s linear infinite;
+      
+    }
+    
+    .logo{
+      width: 100%;
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+  <div class="box">
+    <div class="rotate"></div>
+    <div class="logo">
+      <img src="images/logo_b.png" alt="">
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가로로 흐르는 글자</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    ul, li{list-style: none;}
+
+    .flow_banner{
+      width: 100%;
+      background: black;
+      color: #fff;
+      overflow: hidden;/*넘치는 콘텐츠를 가려줍니다*/
+    }
+    .flow_inner{
+      width: 200%;
+      display: flex;
+    }
+    .flow_inner>.list{
+      display: flex;
+      width: 50%;
+      padding: 20px 0;
+    }
+    .list>li{
+      flex: 1;/*모든 li요소를 같은 비율로 크기(같은 크기)를 변경*/
+      text-align: center;
+      font-size: 18px;
+      white-space: nowrap;
+      transition: all 0.3s;/*변환효과*/
+      cursor: pointer;
+    }
+    .list>li:hover{/*마우스를 올리면 글자가 커지는 효과*/
+      transform: scale(1.2);
+    }
+    .list:nth-child(1){
+      animation: rolling1 40s linear infinite;
+    }
+    @keyframes rolling1{
+      0%{transform: translateX(0);}
+      50%{transform: translateX(-100%);}
+      50.0001%{transform: translateX(100%);}
+      100%{transform: translateX(0);}
+    }
+    .list:nth-child(2){
+      animation: rolling2 40s linear infinite;
+    }
+    @keyframes rolling2{
+      0%{transform: translateX(0);}
+      100%{transform: translateX(-200%);}
+    }
+  </style>
+</head>
+<body>
+  <div class="flow_banner">
+    <div class="flow_inner">
+      <ul class="list">
+        <li>TEST1</li>
+        <li>TEST2</li>
+        <li>TEST3</li>
+        <li>TEST4</li>
+        <li>TEST5</li>
+      </ul>
+      <ul class="list">
+        <li>TEST1</li>
+        <li>TEST2</li>
+        <li>TEST3</li>
+        <li>TEST4</li>
+        <li>TEST5</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
