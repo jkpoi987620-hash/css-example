@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콘텐츠정렬10</title>
+  <link href="reset.css" rel="stylesheet">
+  <style>
+    .gallery{
+      width: 1040px;
+      padding: 40px 10px;
+      margin: auto;
+      display: flex;
+      gap: 20px;
+    }
+    .color-gallery{
+      width: 500px;
+      height: 520px;
+      position: relative;
+    }
+    .color-gallery .txt{
+      width: 100%;
+      height: 120px;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      bottom: 0;
+    }
+    .color-gallery .txt p{
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .color-gallery .dot{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .color-gallery .dot>li{
+      width: 15px; height: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.3s;
+    }
+    .color-gallery .dot>li:hover{opacity: 1;}
+    .color-gallery .dot>li.active{
+      opacity: 1;
+      width: 50px;
+    }
+    .thumbs{
+      width: 500px;
+      display: flex;
+      flex-wrap: wrap;/*줄바꿈 허용*/
+      gap: 20px;
+    }
+    .thumbs>.box{
+      width: 240px;
+      height: 250px;
+      position: relative;
+    }
+    .thumbs>.box:nth-child(1){
+      background: url(images/img1.png);
+    }
+    .thumbs>.box:nth-child(2){
+      background: url(images/img2.png);
+    }
+    .thumbs>.box:nth-child(3){
+      background: url(images/img3.png);
+    }
+    .thumbs>.box:nth-child(4){
+      background: url(images/img4.png);
+    }
+
+    .thumbs>.box>p{
+      position: absolute;
+      left: 0; bottom: 0;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+    }
+
+    .ad-banner{
+      width: 1040px;
+      padding: 0 10px;
+      margin: auto;
+      display: flex;
+      gap: 20px;
+    }
+    .l-banner{
+      width: 500px;
+      height: 160px;
+      background: gold url(images/banner1.png) 80% 50% no-repeat;/*노리피트 (반복 없음)*/
+      padding: 20px 50px;
+    }
+    .l-banner h1{
+      font-size: 24px;
+      font-weight: normal;
+      line-height: 1.6;
+    }
+    .r-banner{
+      width: 500px;
+      display: flex;
+      flex-wrap: wrap;/*줄바꿈 허용한다*/
+      gap: 20px;
+    }
+    .r-banner img{
+      width: 240px;
+      height: 70px;
+      border: 1px solid #999;
+      transition: transform 0.3s;
+    }
+    .r-banner img:hover{
+      transform: scale(1.1);/*커서를 올리면 커지는 효과*/
+    }
+  </style>
+</head>
+<body>
+  <section class="gallery">
+    <article class="color-gallery">
+      <div class="color-img">
+        <img src="images/color1.png" alt="">
+      </div>
+      <div class="txt">
+        <p>Lorem Ipsum</p>
+        <ul class="dot">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </article>
+    <article class="thumbs">
+      <div class="box">
+        <p>Lorem Ipsum</p>
+      </div>
+      <div class="box">
+        <p>Lorem Ipsum</p>
+      </div>
+      <div class="box">
+        <p>Lorem Ipsum</p>
+      </div>
+      <div class="box">
+        <p>Lorem Ipsum</p>
+      </div>
+    </article>
+
+  </section>
+  <section class="ad-banner">
+    <article class="l-banner">
+      <h1>
+        <b>디자인하우스</b>에서<br>
+        더 많은 인사이트를<br>
+        발견하세요!
+      </h1>
+    </article>
+    <article class="r-banner">
+      <img src="images/banner2.png" alt="">
+      <img src="images/banner3.png" alt="">
+      <img src="images/banner4.png" alt="">
+      <img src="images/banner5.png" alt="">
+    </article>
+  </section>
+</body>
+</html>
